@@ -1,0 +1,100 @@
+{
+  "id": "owntwin-samples/kaihinmakuhari",
+  "name": "海浜幕張駅",
+  "type": "station",
+  "type_label": "駅",
+  "iri": "https://beta.owntwin.com/twin/kaihinmakuhari",
+  "description": "海浜幕張駅周辺",
+  "geohash": "xn7d",
+  "bbox": [
+    140.03649063480702,
+    35.644654067488936,
+    140.04753287264248,
+    35.653666932511065
+  ],
+  "canvas": {
+    "width": 1024,
+    "height": 1024
+  },
+  "terrain": {
+    "path": "assets/levelmap.json"
+  },
+  "building": {
+    "path": "assets/buildings.json"
+  },
+  "modules": {
+    "owntwin/base": {
+      "name": "基本",
+      "description": "国土地理院ベクトルタイル提供実験による「基盤地図情報_基本項目」に基づくベースマップを含む基本モジュールです。\n\n<https://github.com/gsi-cyberjapan/vector-tile-experiment>",
+      "license": "https://github.com/gsi-cyberjapan/vector-tile-experiment#%E6%8F%90%E4%BE%9B%E3%81%AE%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91",
+      "actions": [
+        {
+          "type": "link",
+          "text": "この場所の情報修正を提案",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+          "params": [
+            ["entry.265514106", "name"],
+            ["entry.944498222", "iri"]
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "id": "basemap",
+          "name": "ベースマップ",
+          "path": "assets/basemap.svg",
+          "format": "svg",
+          "levels": [
+            0
+          ],
+          "enabled": true
+        }
+      ]
+    },
+    "owntwin/sample_modules/bousai": {
+      "name": "防災・災害対応",
+      "description": "レイヤーは国土地理院ハザードマップポータルサイト「重ねるハザードマップ」のオープンデータです。凡例は <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html> を参照してください。",
+      "license": "ハザードマップポータルサイト <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html>",
+      "actions": [
+        {
+          "type": "link",
+          "text": "この場所の防災マニュアルを見る",
+          "href": null,
+          "params": []
+        },
+        {
+          "type": "link",
+          "text": "この場所から安否状況を登録（発災時のみ）",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+          "params": [
+            ["entry.265514106", "name"],
+            ["entry.944498222", "iri"]
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "id": "kk_keikai",
+          "name": "土砂災害警戒区域（急傾斜地の崩壊）",
+          "path": "assets/kk_keikai.png",
+          "format": "png",
+          "enabled": true
+        },
+        {
+          "id": "kk_houkai",
+          "name": "急傾斜地崩壊危険箇所",
+          "path": "assets/kk_houkai.png",
+          "format": "png",
+          "enabled": true
+        },
+        {
+          "id": "hightide",
+          "name": "高潮浸水想定区域",
+          "path": "assets/hightide.png",
+          "format": "png",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}
