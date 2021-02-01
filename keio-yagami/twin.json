@@ -4,7 +4,7 @@
   "type": "university",
   "type_label": "大学施設",
   "iri": "http://beta.owntwin.com/owntwin-samples/keio-yagami",
-  "community": "https://github.com/ozekik/owntwin-keio-yagami",
+  "community": "https://github.com/owntwin/owntwin-samples/tree/master/keio-yagami",
   "description": "〒223-8522 神奈川県横浜市港北区日吉3-14-1",
   "geohash": "xn763b",
   "bbox": [

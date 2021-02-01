@@ -3,7 +3,8 @@
   "name": "海浜幕張駅",
   "type": "station",
   "type_label": "駅",
-  "iri": "https://beta.owntwin.com/twin/kaihinmakuhari",
+  "iri": "https://beta.owntwin.com/owntwin-samples/kaihinmakuhari",
+  "community": "https://github.com/owntwin/owntwin-samples/tree/master/kaihinmakuhari",
   "description": "海浜幕張駅周辺",
   "geohash": "xn7d",
   "bbox": [
