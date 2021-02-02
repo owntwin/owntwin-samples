@@ -4,14 +4,13 @@
   "type": "station",
   "type_label": "駅",
   "iri": "https://beta.owntwin.com/owntwin-samples/kaihinmakuhari",
-  "community": "https://github.com/owntwin/owntwin-samples/tree/master/kaihinmakuhari",
-  "description": "海浜幕張駅周辺",
+  "description": "",
   "geohash": "xn7d",
   "bbox": [
-    140.03649063480702,
-    35.644654067488936,
-    140.04753287264248,
-    35.653666932511065
+    140.03585815429688,
+    35.643905237877306,
+    140.0482177734375,
+    35.65394870599763
   ],
   "canvas": {
     "width": 1024,
@@ -32,11 +31,9 @@
         {
           "type": "link",
           "text": "この場所の情報修正を提案",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
-          "params": [
-            ["entry.265514106", "name"],
-            ["entry.944498222", "iri"]
-          ]
+          "href": null,
+          "default_params": [],
+          "params": []
         }
       ],
       "layers": [
@@ -66,11 +63,8 @@
         {
           "type": "link",
           "text": "この場所から安否状況を登録（発災時のみ）",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
-          "params": [
-            ["entry.265514106", "name"],
-            ["entry.944498222", "iri"]
-          ]
+          "href": null,
+          "params": []
         }
       ],
       "layers": [
