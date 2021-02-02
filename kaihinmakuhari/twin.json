@@ -4,6 +4,7 @@
   "type": "station",
   "type_label": "駅",
   "iri": "https://beta.owntwin.com/owntwin-samples/kaihinmakuhari",
+  "community": "https://github.com/owntwin/owntwin-samples/blob/master/kaihinmakuhari/twin.json",
   "description": "",
   "geohash": "xn7d",
   "bbox": [
@@ -31,9 +32,11 @@
         {
           "type": "link",
           "text": "この場所の情報修正を提案",
-          "href": null,
-          "default_params": [],
-          "params": []
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+          "params": [
+            ["entry.265514106", "name"],
+            ["entry.944498222", "iri"]
+          ]
         }
       ],
       "layers": [
@@ -42,9 +45,7 @@
           "name": "ベースマップ",
           "path": "assets/basemap.svg",
           "format": "svg",
-          "levels": [
-            0
-          ],
+          "levels": [0],
           "enabled": true
         }
       ]
@@ -63,8 +64,11 @@
         {
           "type": "link",
           "text": "この場所から安否状況を登録（発災時のみ）",
-          "href": null,
-          "params": []
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+          "params": [
+            ["entry.265514106", "name"],
+            ["entry.944498222", "iri"]
+          ]
         }
       ],
       "layers": [
