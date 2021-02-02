@@ -6,6 +6,7 @@
   "iri": "https://beta.owntwin.com/owntwin-samples/akihabara-denkigai",
   "community": "https://github.com/owntwin/owntwin-samples/blob/master/akihabara-denkigai/twin.json",
   "description": "",
+  "geohash": "xn77he",
   "bbox": [
     139.76394653320312,
     35.69522525087309,
@@ -33,8 +34,14 @@
           "text": "この場所の情報修正を提案",
           "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
           "params": [
-            ["entry.265514106", "name"],
-            ["entry.944498222", "iri"]
+            [
+              "entry.265514106",
+              "name"
+            ],
+            [
+              "entry.944498222",
+              "iri"
+            ]
           ]
         }
       ],
@@ -44,7 +51,9 @@
           "name": "ベースマップ",
           "path": "assets/basemap.svg",
           "format": "svg",
-          "levels": [0],
+          "levels": [
+            0
+          ],
           "enabled": true
         }
       ]
@@ -90,6 +99,37 @@
           "enabled": true
         }
       ]
+    },
+    "owntwin/sample_modules/jpsearch": {
+      "name": "ジャパンサーチ",
+      "description": null,
+      "license": "https://jpsearch.go.jp/policy",
+      "actions": [
+        {
+          "type": "link",
+          "text": "場所名でジャパンサーチを検索",
+          "href": "https://jpsearch.go.jp/csearch/jps-cross",
+          "default_param": "csid=jps-cross",
+          "params": [
+            [
+              "q-loc",
+              "name"
+            ]
+          ]
+        },
+        {
+          "type": "link",
+          "text": "位置情報でジャパンサーチを検索",
+          "href": "https://beta.owntwin.com/resolver/jpsearch",
+          "params": [
+            [
+              "geohash",
+              "geohash"
+            ]
+          ]
+        }
+      ],
+      "layers": []
     }
   }
 }
