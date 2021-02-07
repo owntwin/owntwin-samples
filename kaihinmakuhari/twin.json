@@ -6,7 +6,6 @@
   "iri": "https://beta.owntwin.com/owntwin-samples/kaihinmakuhari",
   "community": "https://github.com/owntwin/owntwin-samples/blob/master/kaihinmakuhari/twin.json",
   "description": "",
-  "geohash": "xn7d",
   "bbox": [
     140.03585815429688,
     35.643905237877306,
@@ -23,77 +22,132 @@
   "building": {
     "path": "assets/buildings.json"
   },
-  "modules": {
-    "owntwin/base": {
-      "name": "基本",
-      "description": "国土地理院ベクトルタイル提供実験による「基盤地図情報_基本項目」に基づくベースマップを含む基本モジュールです。\n\n<https://github.com/gsi-cyberjapan/vector-tile-experiment>",
-      "license": "https://github.com/gsi-cyberjapan/vector-tile-experiment#%E6%8F%90%E4%BE%9B%E3%81%AE%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91",
-      "actions": [
-        {
-          "type": "link",
-          "text": "この場所の情報修正を提案",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
-          "params": [
-            ["entry.265514106", "name"],
-            ["entry.944498222", "iri"]
-          ]
-        }
-      ],
-      "layers": [
-        {
-          "id": "basemap",
-          "name": "ベースマップ",
-          "path": "assets/basemap.svg",
-          "format": "svg",
-          "levels": [0],
-          "enabled": true
-        }
-      ]
+  "properties": {
+    "owntwin:geohash": "xn7d",
+    "owntwin.base:actions.suggestion.href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+    "owntwin.base:actions.suggestion.fields.assign_to": {
+      "name": "entry.265514106",
+      "iri": "entry.944498222"
     },
-    "owntwin/sample_modules/bousai": {
-      "name": "防災・災害対応",
-      "description": "レイヤーは国土地理院ハザードマップポータルサイト「重ねるハザードマップ」のオープンデータです。凡例は <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html> を参照してください。",
-      "license": "ハザードマップポータルサイト <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html>",
-      "actions": [
-        {
-          "type": "link",
-          "text": "この場所の防災マニュアルを見る",
-          "href": null,
-          "params": []
-        },
-        {
-          "type": "link",
-          "text": "この場所から安否状況を登録（発災時のみ）",
-          "href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
-          "params": [
-            ["entry.265514106", "name"],
-            ["entry.944498222", "iri"]
-          ]
-        }
-      ],
-      "layers": [
-        {
-          "id": "kk_keikai",
-          "name": "土砂災害警戒区域（急傾斜地の崩壊）",
-          "path": "assets/kk_keikai.png",
-          "format": "png",
-          "enabled": true
-        },
-        {
-          "id": "kk_houkai",
-          "name": "急傾斜地崩壊危険箇所",
-          "path": "assets/kk_houkai.png",
-          "format": "png",
-          "enabled": true
-        },
-        {
-          "id": "hightide",
-          "name": "高潮浸水想定区域",
-          "path": "assets/hightide.png",
-          "format": "png",
-          "enabled": true
-        }
-      ]
+    "owntwin.base:layers.basemap.enabled": true,
+    "owntwin.sample_modules.bousai:actions.anpi.href": "https://docs.google.com/forms/d/e/1FAIpQLScKWInl0KbpgEYjMjB29MWRRRnTU9bLG_fWyhwF45T0VeawIA/viewform",
+    "owntwin.sample_modules.bousai:actions.anpi.fields.assign_to": {
+      "name": "entry.265514106",
+      "iri": "entry.944498222"
+    },
+    "owntwin.sample_modules.bousai:actions.manual.href": null,
+    "owntwin.sample_modules.bousai:actions.manual.fields.name.assign_to": {
+      "name": null,
+      "iri": null
+    },
+    "owntwin.sample_modules.bousai:layers.kk_keikai.enabled": true,
+    "owntwin.sample_modules.bousai:layers.kk_houkai.enabled": true,
+    "owntwin.sample_modules.bousai:layers.hightide.enabled": true
+  },
+  "modules": {
+    "owntwin.base": {
+      "version": "^0.1.0",
+      "definition": {
+        "version": "0.1.0",
+        "name": "基本",
+        "description": "国土地理院ベクトルタイル提供実験による「基盤地図情報_基本項目」に基づくベースマップを含む基本モジュールです。\n\n<https://github.com/gsi-cyberjapan/vector-tile-experiment>",
+        "license": "https://github.com/gsi-cyberjapan/vector-tile-experiment#%E6%8F%90%E4%BE%9B%E3%81%AE%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91",
+        "actions": [
+          {
+            "id": "suggestion",
+            "type": "link",
+            "text": "この場所の情報修正を提案",
+            "fields": ["name", "iri"]
+          }
+        ],
+        "layers": [
+          {
+            "id": "basemap",
+            "name": "ベースマップ",
+            "levels": [0],
+            "path": "assets/basemap.svg",
+            "format": "svg"
+          }
+        ]
+      }
+    },
+    "owntwin.sample_modules.bousai": {
+      "version": "^0.1.0",
+      "definition": {
+        "version": "0.1.0",
+        "name": "防災・災害対応",
+        "description": "レイヤーは国土地理院ハザードマップポータルサイト「重ねるハザードマップ」のオープンデータです。凡例は <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html> を参照してください。",
+        "license": "ハザードマップポータルサイト <https://disaportal.gsi.go.jp/hazardmap/copyright/opendata.html>",
+        "actions": [
+          {
+            "id": "manual",
+            "type": "link",
+            "text": "この場所の防災マニュアルを見る",
+            "href": null,
+            "fields": []
+          },
+          {
+            "id": "anpi",
+            "type": "link",
+            "text": "この場所から安否状況を登録（発災時のみ）",
+            "href": null,
+            "fields": ["name", "iri"]
+          }
+        ],
+        "layers": [
+          {
+            "id": "kk_keikai",
+            "name": "土砂災害警戒区域（急傾斜地の崩壊）",
+            "path": "assets/kk_keikai.png",
+            "format": "png"
+          },
+          {
+            "id": "kk_houkai",
+            "name": "急傾斜地崩壊危険箇所",
+            "path": "assets/kk_houkai.png",
+            "format": "png"
+          },
+          {
+            "id": "hightide",
+            "name": "高潮浸水想定区域",
+            "path": "assets/hightide.png",
+            "format": "png"
+          }
+        ]
+      }
+    },
+    "owntwin.sample_modules.jpsearch": {
+      "version": "^0.1.0",
+      "definition": {
+        "version": "0.1.0",
+        "name": "ジャパンサーチ",
+        "description": null,
+        "license": "https://jpsearch.go.jp/policy",
+        "actions": [
+          {
+            "id": "search_by_name",
+            "type": "link",
+            "text": "場所名でジャパンサーチを検索",
+            "href": "https://jpsearch.go.jp/csearch/jps-cross",
+            "default_param": "csid=jps-cross",
+            "fields": ["name"],
+            "fields.assign_to": {
+              "name": "q-loc"
+            }
+          },
+          {
+            "id": "search_by_location",
+            "type": "link",
+            "text": "位置情報でジャパンサーチを検索",
+            "href": "https://beta.owntwin.com/resolver/jpsearch",
+            "fields": ["owntwin:geohash"],
+            "fields.assign_to": {
+              "owntwin:geohash": "geohash"
+            }
+          }
+        ],
+        "layers": []
+      }
     }
   }
 }
